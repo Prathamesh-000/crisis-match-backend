@@ -58,6 +58,9 @@ Return JSON ONLY:
 }
 """
 )
+@app.get("/")
+def home():
+    return {"message": "Crisis Match Backend Running 🚀"}
 
 @app.post("/agent")
 def run_agent(input: Input):
